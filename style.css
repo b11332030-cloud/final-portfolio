@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>final</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DS | Multidisciplinary Creator Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,500;1,300&family=Inter:wght@200;300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="splash-container" id="splashScreen">
+        <img src="https://i.postimg.cc/3xVY0wJs/Gemini-Generated-Image-h954xwh954xwh954.png" alt="背景圖" class="splash-ink-bg">
+        <div class="splash-content">
+            <div class="icon-placeholder-splash">
+                <img src="https://i.postimg.cc/3w50VcLF/LOGO.png" alt="DS Logo" class="splash-logo-img">
+            </div> 
+            <h1 class="splash-title">DESIGNER PORTFOLIO</h1>
+        </div>
+    </div>
+
+    <div class="main-wrapper">
+
+        <section class="hero-section">
+            <nav class="navbar">
+                <div class="nav-brand">
+                    <img src="https://i.postimg.cc/3w50VcLF/LOGO.png" alt="Logo" class="brand-logo-img">
+                    <span class="brand-name">DESIGNER STUDIO</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#" class="nav-item active">INDEX</a></li>
+                    <li><a href="#portfolio" class="nav-item">PROJECTS</a></li>
+                    <li><a href="#contact" class="nav-item">INQUIRIES</a></li>
+                    <li><a href="#reflection" class="nav-item">REFLECTION</a></li>
+                </ul>
+            </nav>
+
+            <div class="hero-container-center">
+                <div class="hero-content">
+                    <div class="hero-header-block">
+                        <p class="hero-subtitle">MULTIDISCIPLINARY CREATOR</p>
+                        <h1 class="hero-main-title">VISUAL STRATEGIES<br>FOR THE DIGITAL AGE</h1>
+                    </div>
+
+                    <div class="hero-bottom-layout">
+                        <div class="hero-left-experience">
+                            <p class="hero-intro">
+                                <strong>A Taichung-based creator exploring the convergence of avant-garde graphic design and vivid 3D space.</strong>
+                                <br><br>
+                                視覺傳達創作者，擅長平面設計與立體3D渲染。希望達到具備強烈視覺張力的數位作品。
+                                <br><br>
+                                專長涵蓋 3D 視覺渲染、數位影像合成與品牌視覺系統建立。目前除專注於個人藝術創作外，亦積極與各界跨領域合作，探索數位時代下的視覺新策略。
+                            </p>
+                        </div>
+
+                        <div class="hero-right-profile">
+                            <div class="profile-image-box">
+                                <img src="https://i.postimg.cc/NfG6xFLB/ge-ren-xiao-xiang.png" alt="個人圖像" class="profile-img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <main class="portfolio-section" id="portfolio">
+            <div class="section-header">
+                <span class="section-number">01 /</span>
+                <h3 class="section-title">SELECTED WORKS</h3>
+            </div>
+            <div class="portfolio-grid">
+                <div class="grid-item item-featured">
+                    <div class="work-card">
+                        <div class="work-img-container">
+                            <img src="https://i.postimg.cc/MGCJgnj8/ying-mu-xie-qu-hua-mian-2026-06-29-163912.png" alt="Dimensional Reconstruction" class="work-img">
+                        </div>
+                        <div class="work-info">
+                            <span class="work-category">平面插畫 /Gradient</span>
+                            <h4 class="work-title">The Woman Who Weaves Words</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item item-normal">
+                    <div class="work-card">
+                        <div class="work-img-container">
+                            <img src="https://i.postimg.cc/bJSVcLfL/ying-mu-xie-qu-hua-mian-2026-06-29-165305.png" alt="Visual Laboratory No.5" class="work-img">
+                        </div>
+                        <div class="work-info">
+                            <span class="work-category">角色設計場景圖 /Scene illustrations</span>
+                            <h4 class="work-title">The broken laboratory</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item item-normal">
+                    <div class="work-card">
+                        <div class="work-img-container">
+                            <img src="https://i.postimg.cc/85SnhM6P/ying-mu-xie-qu-hua-mian-2026-06-29-164043.png" alt="Core Aesthetics Elevation" class="work-img">
+                        </div>
+                        <div class="work-info">
+                            <span class="work-category">廣告banner/ Masking film</span>
+                            <h4 class="work-title">Seoul Happy Family Travel</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item item-normal">
+                    <div class="work-card">
+                        <div class="work-img-container">
+                            <img src="https://i.postimg.cc/DwKTCJLf/01-zhan-you-yun-di-san-ci-zuo-ye-jpg.jpg" alt="Car modeling" class="work-img">
+                        </div>
+                        <div class="work-info">
+                            <span class="work-category">3D 建模 / Modeling</span>
+                            <h4 class="work-title">Car</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item item-normal">
+                    <div class="work-card">
+                        <div class="work-img-container">
+                            <img src="https://i.postimg.cc/QC23ZVz1/03.jpg" alt="Chromatic Sphere Exploration" class="work-img">
+                        </div>
+                        <div class="work-info">
+                            <span class="work-category">3D 渲染/ Multiple models</span>
+                            <h4 class="work-title">Robot sitting on the bench</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item item-normal">
+                    <div class="work-card">
+                        <div class="work-img-container">
+                            <img src="https://i.postimg.cc/6qrXwBNt/B.jpg" alt="The Wizard of Oz" class="work-img">
+                        </div>
+                        <div class="work-info">
+                            <span class="work-category">3D 渲染 / Multiple models</span>
+                            <h4 class="work-title">The Wizard of Oz</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <section class="contact-section" id="contact">
+            <div class="contact-wrapper">
+                <div class="contact-left">
+                    <span class="section-number">02 /</span>
+                    <h3 class="section-title">LET'S WORK TOGETHER</h3>
+                    <p class="contact-text">如果您有任何關於平面設計、3D渲染或是數位網頁前端的接案合作需求，歡迎隨時與我連繫。</p>
+                    <div class="contact-info-block">
+                        <p>電話號碼：0905 XXX XXX</p>
+                        <p>電子郵件：moallyXXX@gmail.com</p>
+                    </div>
+                </div>
+                <form class="contact-form" onsubmit="event.preventDefault();">
+                    <div class="form-group">
+                        <label class="form-label">NAME / 姓名</label>
+                        <input type="text" class="form-input" placeholder="Your name">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">EMAIL / 電子郵件</label>
+                        <input type="email" class="form-input" placeholder="Your email address">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">PROJECT BRIEF / 需求簡述</label>
+                        <textarea class="form-textarea" rows="4" placeholder="Tell me about your project..."></textarea>
+                    </div>
+                    <button type="submit" class="form-submit-btn">SUBMIT INQUIRY →</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="reflection-section" id="reflection">
+            <div class="reflection-container">
+                <span class="section-number">03 /</span>
+                <h3 class="section-title">REFLECTION</h3>
+                <div class="reflection-box">
+                    <p class="reflection-paragraph">這裡填寫你的期末網頁心得與意見...</p>
+                    <button type="button" class="form-submit-btn reflection-btn" onclick="alert('感謝您的填寫！訊息已模擬送出。');">SUBMIT REFLECTION →</button>
+                </div>
+            </div>
+        </section>
+
+        <footer class="site-footer">
+            <p>© 2026 DESIGNER STUDIO. ALL RIGHTS RESERVED. POWERED BY AI COLLABORATION.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                const splash = document.getElementById('splashScreen');
+                splash.style.opacity = '0';
+                splash.style.transition = 'opacity 0.6s cubic-bezier(0.25, 1, 0.5, 1)';
+                setTimeout(() => splash.style.display = 'none', 600);
+            }, 1500);
+        });
+    </script>
+</body>
+</html>
+    
+  </body>
+  
+</html>

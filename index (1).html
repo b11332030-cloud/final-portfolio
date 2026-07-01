@@ -1,0 +1,560 @@
+/* ========================================== */
+/* 系統全域基礎設定與變數系統 (Global Styles) */
+/* ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #0b0b0b;          /* 雙橫線 */
+    --text-pure-white: #ffffff;    /* 核心規格：內文全白 */
+    --text-cool-grey: #e0e0e0;     /* 提高亮度確保內文看得懂 */
+    --text-dark-grey: rgba(255, 255, 255, 0.4); /* 副標採用透明度降低 */
+    --border-color: #3a3a3a;       
+    --border-light: rgba(255, 255, 255, 0.15); 
+    --font-serif: 'Cormorant Garamond', serif; 
+    --font-sans: 'Inter', sans-serif;          
+    --spacing-system: 40px;   
+}
+
+html {
+    scroll-behavior: smooth;
+    background-color: var(--bg-color);
+    color: var(--text-cool-grey);
+    font-family: var(--font-sans);
+    font-size: 15px;
+    letter-spacing: 0.05em;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: var(--bg-color); 
+}
+
+.main-wrapper {
+    width: 100%;
+    padding: 0 var(--spacing-system);
+    background-color: var(--bg-color);
+}
+
+/* ========================================== */
+/* 0. 開場動畫 (Splash Screen) */
+/* ========================================== */
+.splash-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 1;
+    overflow: hidden;
+}
+
+.splash-ink-bg {
+    position: absolute;      
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    width: 100%;             
+    height: 100%;            
+    object-fit: contain;     
+    opacity: 0.3;            
+    z-index: 1;              
+    pointer-events: none;    
+}
+
+.splash-content {
+    position: relative;
+    z-index: 2; 
+    text-align: center;
+}
+
+.icon-placeholder-splash {
+    width: 120px;   
+    height: 120px;
+    background-color: #ffffff; 
+    border-radius: 50%;        
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 25px auto;
+    box-shadow: 0 0 30px rgba(255,255,255,0.1);
+    overflow: hidden; 
+}
+
+.splash-logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+}
+
+.splash-title {
+    font-family: var(--font-serif);
+    color: #ffffff;
+    font-weight: 300;
+    font-size: 1.8rem;
+    letter-spacing: 0.3em;
+    margin-top: 15px;
+}
+
+/* ========================================== */
+/* 1. 首頁區塊與滿版導覽列 (Navbar & Hero) */
+/* ========================================== */
+.hero-section {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    background-color: var(--bg-color);
+}
+
+/* 相對全寬定位，防止爆出版面且確保深灰色背景完整 */
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0; 
+    background-image: url('https://i.postimg.cc/3xVY0wJs/Gemini-Generated-Image-h954xwh954xwh954.png'); 
+    background-size: cover;        
+    background-position: center;   
+    background-repeat: no-repeat; 
+    background-blend-mode: color-burn; 
+    background-color: rgba(11, 11, 11, 0.96); /* 確保深灰黑色區塊 100% 顯現 */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.brand-logo-img {
+    width: 38px; 
+    height: 38px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #ffffff; 
+}
+
+.brand-name {
+    font-family: var(--font-sans);
+    font-weight: 400;
+    font-size: 0.9rem;
+    color: var(--text-pure-white); /*  白色文字完美顯現 */
+    letter-spacing: 0.15em;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: var(--spacing-system); 
+}
+
+.nav-item {
+    text-decoration: none;
+    color: var(--text-cool-grey);
+    font-size: 0.8rem;
+    font-family: var(--font-sans);
+    letter-spacing: 0.1em;
+    transition: color 0.3s ease;
+}
+
+.nav-item:hover, .nav-item.active {
+    color: var(--text-pure-white);
+}
+.nav-item:hover, .nav-item.active { color: var(--text-pure-white); }
+
+/* 核心置中容器 */
+.hero-container-center {
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    padding-top: 80px;      
+    padding-bottom: 80px;    
+    border-bottom: 1px solid var(--border-color); 
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 1150px; 
+    display: flex;
+    flex-direction: column;
+    gap: 75px; 
+}
+
+.hero-header-block {
+    width: 100%;
+}
+
+.hero-subtitle {
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    color: var(--text-dark-grey); /*  透明度調低副標 */
+    letter-spacing: 0.3em;
+    margin-bottom: 25px; 
+}
+
+.hero-main-title {
+    font-family: var(--font-serif);
+    font-size: clamp(2.8rem, 5.5vw, 4.4rem); 
+    color: var(--text-pure-white); /* 全白主標 */
+    font-weight: 300;
+    line-height: 1.2;
+    letter-spacing: 0.05em;
+}
+
+/* 下排雙欄佈局 */
+.hero-bottom-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 100px; 
+    width: 100%;
+}
+
+.hero-left-experience {
+    flex: 1.2; 
+    max-width: 600px;
+}
+
+.hero-intro {
+    font-family: var(--font-sans);
+    font-weight: 200;
+    font-size: 1.05rem;
+    line-height: 1.85; 
+    color: var(--text-pure-white); /*  全白清晰內文 */
+    text-align: justify;
+}
+
+.hero-right-profile {
+    flex: 0.8;
+    display: flex;
+    justify-content: flex-end; 
+}
+
+.profile-image-box {
+    width: 280px;            
+    background-color: #ffffff; 
+    padding: 15px;           
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6); 
+}
+
+.profile-img {
+    width: 100%;
+    height: auto;            
+    display: block;
+    object-fit: contain;
+}
+
+/* ========================================== */
+/* 2. 作品展示區塊 (Portfolio Grid) */
+/* ========================================== */
+.portfolio-section {
+    padding: calc(var(--spacing-system) * 2) 0; 
+    border-bottom: 1px solid var(--border-color); 
+}
+.section-header {
+    display: flex;
+    align-items: baseline;
+    gap: 15px;
+    margin: 40px 0 60px 0;
+}
+.section-number {
+    font-family: var(--font-serif);
+    font-style: italic;
+    color: var(--text-dark-grey);
+    font-size: 1.3rem;
+}
+.section-title {
+    font-family: var(--font-sans);
+    font-weight: 300;
+    font-size: 1.1rem;
+    color: var(--text-pure-white);
+    letter-spacing: 0.2em;
+}
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr;
+    gap: 30px;
+}
+.item-featured {
+    grid-row: span 2;
+}
+.work-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.work-img-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-color: #121212;
+    margin-bottom: 15px;
+    border: 1px solid #1f1f1f;
+}
+.item-featured .work-img-container {
+    aspect-ratio: 3 / 4;
+}
+.item-normal .work-img-container {
+    aspect-ratio: 16 / 11;
+}
+.work-img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease;
+}
+.work-card:hover .work-img {
+    transform: scale(1.04);
+    filter: brightness(1.05);
+}
+.work-info {
+    padding: 5px 0;
+}
+.work-category {
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    color: var(--text-dark-grey);
+    letter-spacing: 0.1em;
+    display: block;
+    margin-bottom: 5px;
+}
+.work-title {
+    font-family: var(--font-serif);
+    font-weight: 300;
+    font-size: 1.15rem;
+    color: var(--text-pure-white);
+    letter-spacing: 0.02em;
+    line-height: 1.3;
+}
+
+/* ========================================== */
+/* 3. 聯絡洽談與反思區塊 (Contact & Reflection) */
+/* ========================================== */
+.contact-section {
+    padding: calc(var(--spacing-system) * 2.5) 0;
+    border-bottom: 1px solid var(--border-color); 
+}
+
+.contact-wrapper {
+    display: flex;
+    gap: 80px;
+}
+
+.contact-left {
+    flex: 1;
+}
+
+.contact-text {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: var(--text-cool-grey);
+    margin-top: 30px;
+    max-width: 400px;
+}
+
+.contact-info-block {
+    margin-top: 25px;
+    line-height: 2;
+    color: var(--text-pure-white);
+}
+
+.contact-form {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-label {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    color: var(--text-dark-grey);
+    letter-spacing: 0.1em;
+}
+
+.form-input, .form-textarea {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #333333;
+    padding: 10px 0;
+    color: var(--text-pure-white);
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.form-input:focus, .form-textarea:focus {
+    border-color: var(--text-pure-white);
+}
+
+.form-submit-btn {
+    align-self: flex-start;
+    background-color: transparent;
+    border: 1px solid var(--text-pure-white);
+    color: var(--text-pure-white);
+    padding: 12px 30px;
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.form-submit-btn:hover {
+    background-color: var(--text-pure-white);
+    color: #000000;
+}
+
+/* 反思區塊 */
+.reflection-section {
+    padding: calc(var(--spacing-system) * 2.5) 0;
+    border-bottom: 1px solid var(--border-color); 
+}
+
+.reflection-box {
+    margin-top: 30px;
+    border-left: 2px solid var(--text-pure-white); 
+    padding-left: 25px;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.reflection-paragraph {
+    font-size: 0.95rem;
+    line-height: 1.9;
+    color: var(--text-pure-white);
+    text-align: justify;
+}
+
+.reflection-btn {
+    align-self: flex-start; /* 確保按鈕寬度不會被強制拉伸 */
+}
+
+.site-footer {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.site-footer p {
+    font-size: 0.7rem;
+    color: var(--text-dark-grey);
+    letter-spacing: 0.05em;
+}
+
+/* ========================================== */
+/* 4. 響應式網頁設計系統 (RWD) */
+/* ========================================== */
+
+/* 當螢幕小於 1200px（平板與中大螢幕設備） */
+@media (max-width: 1200px) {
+    :root { 
+        --spacing-system: 24px; 
+    }
+    
+    .navbar {
+        flex-direction: column; 
+        gap: 20px;
+        text-align: center;
+    }
+    
+    .nav-links {
+        padding-left: 0;
+        gap: 20px;
+        margin-left: 0; 
+    }
+
+    .hero-container-center {
+        padding-top: 40px;
+    }
+
+    .hero-content {
+        gap: 50px;
+    }
+
+    .hero-bottom-layout {
+        flex-direction: column; 
+        gap: 50px; 
+    }
+
+    .hero-left-experience,
+    .hero-right-profile {
+        width: 100%;
+        max-width: 100%;
+        justify-content: center; 
+    }
+
+    .profile-image-box {
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr 1fr; 
+    }
+
+    .item-featured {
+        grid-row: auto;
+        grid-column: span 2; 
+    }
+    
+    .contact-wrapper {
+        flex-direction: column;
+        gap: 50px;
+    }
+}
+
+/* 當螢幕小於 576px（智慧型手機） */
+@media (max-width: 576px) {
+    html { 
+        font-size: 14px; 
+    }
+    
+    .nav-links {
+        flex-direction: column; 
+        gap: 15px;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr; 
+    }
+
+    .item-featured {
+        grid-column: span 1;
+    }
+    
+    .item-featured .work-img-container {
+        aspect-ratio: 16/11; 
+    }
+    
+    .form-submit-btn, .reflection-btn {
+        width: 100%; 
+        text-align: center;
+    }
+}
